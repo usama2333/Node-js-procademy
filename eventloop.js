@@ -20,4 +20,15 @@ setTimeout(() => {
     console.log('Timer callback executed')
 },0)
 
+//Stored in 2nd phase
+fs.readFile('./Files/input.txt',() => {
+    console.log('Read file successfully')
+})
+
+//Stored in 3rd phase
+
+setImmediate(() => {
+    console.log('Set immediate call')
+})
+
 console.log('Program has ended')
